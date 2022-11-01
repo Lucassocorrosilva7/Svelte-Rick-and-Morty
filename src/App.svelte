@@ -23,14 +23,16 @@
   }
 </script>
 
-<h1>Rick and Morty Svelte</h1>
-
-<div>
-  {#each characters as character}
-    <Character {character} />
-  {/each}
-</div>
+<h1 class="heading">Rick and Morty Svelte</h1>
 <div>
   <button on:click={() => prevPage()} disabled={page === 1}>Voltar</button>
   <button on:click={() => nextPage()}>Próximo</button>
+</div>
+
+<div class="container">
+  <div class="grid">
+    {#each characters as character}
+      <Character {character} />
+    {/each}
+  </div>
 </div>

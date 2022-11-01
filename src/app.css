@@ -1,9 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+html{
+  font-size: 62.5%;
 }
+
+body{
+  font-family: 'Inter', sans-serif;
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+button{
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+
+.heading{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 5rem;
+
+}
+
+.container{
+  max-width: 120rem;
+  margin: auto; 
+}
+
+
+ .grid{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+} 
+
