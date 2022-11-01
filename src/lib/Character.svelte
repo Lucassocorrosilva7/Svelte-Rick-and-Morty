@@ -5,5 +5,5 @@
 <div class="card">
   <img src={character.image} alt={character.name} />
   <h1>{character.name}</h1>
-  <!-- <h3>{character.species}</h3> -->
+  <h3>{character.species}</h3>
 </div>

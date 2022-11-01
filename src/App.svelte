@@ -1,7 +1,9 @@
 <script>
   import Character from "./lib/Character.svelte";
+  import Heading from "./lib/Heading.svelte";
+  import Buttons from "./lib/Buttons.svelte";
   let characters = [];
-  let page = 0;
+  let page = 1;
 
   async function loadCharacters() {
     const response = await fetch(
@@ -23,16 +25,16 @@
   }
 </script>
 
-<h1 class="heading">Rick and Morty Svelte</h1>
-<div>
-  <button on:click={() => prevPage()} disabled={page === 1}>Voltar</button>
-  <button on:click={() => nextPage()}>Próximo</button>
-</div>
-
-<div class="container">
-  <div class="grid">
-    {#each characters as character}
-      <Character {character} />
-    {/each}
+<main>
+  <Heading />
+  <div class="btns">
+    <Buttons {prevPage} {page} {nextPage} />
   </div>
-</div>
+  <div class="container">
+    <div class="grid">
+      {#each characters as character}
+        <Character {character} />
+      {/each}
+    </div>
+  </div>
+</main>
